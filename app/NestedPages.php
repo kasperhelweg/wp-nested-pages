@@ -9,10 +9,10 @@ class NestedPages {
 	{
 		// dev/live
 		global $np_env;
-		$np_env = 'live';
+		$np_env = 'dev';
 
 		global $np_version;
-		$np_version = '1.3.0';
+		$np_version = '1.3.1';
 
 		$app = new NestedPages\Bootstrap;
 	}
