@@ -56,6 +56,9 @@
 		<a href="#" class="np-toggle-edit"><i class="np-icon-pencil"></i></a>
 
 
+		<?php if ( function_exists('icl_get_languages') ) echo $this->wpml_presenter->editLinks($this->post->id, $this->post_type->name); ?>
+
+
 		<?php if ( !$this->post->hierarchical ) : echo $this->post->hierarchical; ?>
 		<div class="np-post-columns">
 			<ul class="np-post-info">

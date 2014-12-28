@@ -2,6 +2,7 @@
 // Links/Tools Above the Page Listing
 // --------------------------------------------------
 
+// subsubsub & search
 .nestedpages-tools {
 	@include clearfix;
 	clear: both;
@@ -27,3 +28,45 @@
 		float: right;
 	}
 }
+
+// Top Page Tools
+.np-page-tools {
+	float: right;
+	margin-top: -30px;
+	@include clearfix;
+
+	.np-sync-menu-cont {
+		float: right;
+		margin: 2px 8px 0px 0px;
+	}
+
+	.nestedpages-toggleall {
+		float: right;
+		margin: 0;
+	}
+
+	// Language Switcher
+	.np-language-select {
+		float: right;
+		margin: -2px 8px 0px 0px;
+	}
+
+} // Top page Tools
+
+
+// Publish Toggle
+.np-toggle-publish {
+	color: darken($white, 40%);
+	&.active {
+		color: $black;
+		font-weight: bold;
+	}
+}
+
+#nested-loading {
+	display: none;
+	float: right;
+	width: 30px;
+	margin: 0px 20px 0 0;
+}
+

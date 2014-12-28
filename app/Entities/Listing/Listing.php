@@ -7,6 +7,8 @@ use NestedPages\Entities\Post\PostRepository;
 use NestedPages\Entities\User\UserRepository;
 use NestedPages\Entities\PostType\PostTypeRepository;
 use NestedPages\Entities\Listing\ListingRepository;
+use NestedPages\Entities\WPML\WPMLRepository;
+use NestedPages\Entities\WPML\WPMLPresenter;
 
 /**
 * Primary Post Listing
@@ -73,6 +75,16 @@ class Listing {
 	*/
 	private $sort_options;
 
+	/**
+	* WPML Repository
+	*/
+	private $wpml;
+
+	/**
+	* WPML Presenter
+	*/
+	private $wpml_presenter;
+
 
 	public function __construct($post_type)
 	{
@@ -83,6 +95,8 @@ class Listing {
 		$this->post_type_repo = new PostTypeRepository;
 		$this->listing_repo = new ListingRepository;
 		$this->post_data_factory = new PostDataFactory;
+		$this->wpml = new WPMLRepository;
+		$this->wpml_presenter = new WPMLPresenter;
 	}
 
 

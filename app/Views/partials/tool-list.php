@@ -97,4 +97,6 @@
 	</div>
 	<?php endif; ?>
 
+	<?php if ( function_exists('icl_get_languages') ) echo $this->wpml_presenter->flagHeaderList(); ?>
+
 </div><!-- .nestedpages-tools -->

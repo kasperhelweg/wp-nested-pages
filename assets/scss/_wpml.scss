@@ -1,0 +1,36 @@
+//
+// WPML specific styles
+// --------------------------------------------------
+
+// Flag Header list
+.np-flag-header {
+	@include unstyled;
+	@include clearfix;
+	float: right;
+	margin: 5px 21px 0px 0px;
+	li {
+		float: left;
+		margin: 0px 0px 0px 11px;
+	}
+	&.yoast-enabled {
+		margin-right: 42px;
+	}
+}
+
+// Edit links in list view
+.nestedpages ol li .np-wpml-editlinks {
+	float: right;
+	margin: 0px 14px 0px 0px;
+	li {
+		background: transparent;
+		float: left;
+		border: 0;
+		a {
+			border-left: 0;
+			font-size: 11px;
+		}
+		&:first-child a {
+			border-left: 1px solid #e1e1e1;
+		}
+	}
+}
