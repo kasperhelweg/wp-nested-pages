@@ -1,7 +1,7 @@
 === Nested Pages ===
 Contributors: kylephillips
 Donate link: http://nestedpages.com/
-Tags: pages, admin, nested, tree view, page tree, sort, quick edit
+Tags: pages, admin, nested, tree view, page tree, sort, quick edit, post order
 Requires at least: 3.8
 Tested up to: 4.1
 Stable tag: 1.3.0

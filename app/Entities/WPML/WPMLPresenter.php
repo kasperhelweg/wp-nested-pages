@@ -60,7 +60,9 @@ class WPMLPresenter {
 	public function editLinks($post_id, $post_type)
 	{
 		$translations = $this->wpml_repo->getTranslations($post_id);
+		
 		$languages = $this->wpml_repo->getLanguageCodeArray();
+		$source_lang = ( ICL_LANGUAGE_CODE == 'all' ) ? $this->wpml_repo->defaultLanguage() : ICL_LANGUAGE_CODE;
 		$out = '<ul class="np-wpml-editlinks">';
 		foreach($languages as $lang){
 			if ( $lang !== ICL_LANGUAGE_CODE ){
@@ -69,7 +71,7 @@ class WPMLPresenter {
 					$out .= '<li><a href="' . get_edit_post_link($translations[$lang]->element_id) . '" class="np-btn"><i class="np-icon-pencil"></i></a></li>';
 				} else {
 					// Link to New Translation
-					$link = admin_url('post-new.php?post_type=' . $post_type . '&trid=' . $post_id . '&lang=' . $lang . '&source_lang=' . ICL_LANGUAGE_CODE);
+					$link = admin_url('post-new.php?post_type=' . $post_type . '&trid=' . $post_id . '&lang=' . $lang . '&source_lang=' . $source_lang);
 					$out .= '<li><a href="' . $link . '" class="np-btn"><i class="np-icon-plus"></i></a></li>';
 				}
 			}

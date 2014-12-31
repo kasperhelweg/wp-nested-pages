@@ -92,11 +92,12 @@
 			</div>
 		</form>
 		<div class="np-tools-search">
+			<?php if ( function_exists('icl_get_languages') ) echo $this->wpml_presenter->flagHeaderList(); ?>
 			<input type="search" id="nestedpages-search" placeholder="<?php echo $this->post_type->labels->search_items; ?>">
 		</div><!-- .np-tools-search -->
 	</div>
+	<?php elseif ( function_exists('icl_get_languages') ) : echo $this->wpml_presenter->flagHeaderList(); ?>
 	<?php endif; ?>
 
-	<?php if ( function_exists('icl_get_languages') ) echo $this->wpml_presenter->flagHeaderList(); ?>
 
 </div><!-- .nestedpages-tools -->
